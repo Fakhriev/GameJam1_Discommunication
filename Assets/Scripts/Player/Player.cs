@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IService
 {
     [SerializeField] private RagdollActivator ragdollActivator;
     [SerializeField] private PlayerHibox playerHibox;
