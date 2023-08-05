@@ -9106,7 +9106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea156983ab8224142a2d17c987438c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSceneIndex: 0
+  currentSceneIndex: 1
 --- !u!23 &61947738848859217
 MeshRenderer:
   m_ObjectHideFlags: 0
