@@ -68,6 +68,12 @@ namespace StarterAssets
 
 		private void OnApplicationFocus(bool hasFocus)
 		{
+
+#if UNITY_EDITOR
+            SetCursorState(false);
+			return;
+#endif
+
 			SetCursorState(cursorLocked);
 		}
 

@@ -9,6 +9,7 @@ public class SceneController : MonoBehaviour
     private static void OnBeforeSceneLoadRuntimeMethod()
     {
         SceneManager.LoadScene(0);
+        Cursor.visible = true;
     }
 
     public void RestartScene()
