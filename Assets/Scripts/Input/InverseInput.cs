@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class InverseInput : MonoBehaviour
 {
-
-    [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private InverseInputTrigger _trigger;
+    [SerializeField] private PlayerInput _playersInput;
     private Dictionary<InputMapState, string> _nameByStates = new Dictionary<InputMapState, string>
     {
         {InputMapState.Normal , "Player" },
@@ -16,17 +14,17 @@ public class InverseInput : MonoBehaviour
 
     private void OnInputChanged(InputMapState newState)
     {
-        _playerInput.SwitchCurrentActionMap(_nameByStates[newState]);
+        _playersInput.SwitchCurrentActionMap(_nameByStates[newState]);
     }
 
     private void OnEnable()
     {
-        _trigger.InputMapChanged += OnInputChanged;
+        InverseInputTrigger.InputMapChanged += OnInputChanged;
     }
 
     private void OnDisable()
     {
-        _trigger.InputMapChanged -= OnInputChanged;
+        InverseInputTrigger.InputMapChanged -= OnInputChanged;
     }
 }
 
