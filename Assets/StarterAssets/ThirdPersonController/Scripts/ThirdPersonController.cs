@@ -1,6 +1,7 @@
 ﻿ using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -387,6 +388,10 @@ namespace StarterAssets
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
+        }
+        public void ForceJump(float jumpHeightForce)
+        {
+            _verticalVelocity = Mathf.Sqrt(jumpHeightForce * -2f * Gravity);
         }
     }
 }
