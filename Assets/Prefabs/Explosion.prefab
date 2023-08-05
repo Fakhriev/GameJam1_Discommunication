@@ -19560,6 +19560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8644082243864138971}
   - component: {fileID: 7499452024514308371}
+  - component: {fileID: 3927717082215302995}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -19597,3 +19598,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger: {fileID: 0}
   particleSystem: {fileID: 1810676820872087159}
+--- !u!114 &3927717082215302995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253671853912289763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297b3170ad41a7142a3e310ea368caf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 95cffa53d73f3df4fbaf4db91339abc1, type: 3}

@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369d2289a9cf3f4429bf1bac8c5d69eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inverseInputEffectTimeInSec: 5
+  _inverseInputEffectTimeInSec: 7.5
   _destoyAfterCollided: 0
   _model: {fileID: 1224861767668238939}
 --- !u!114 &7384469937726593149
