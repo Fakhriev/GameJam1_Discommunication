@@ -10,8 +10,7 @@ public class RagdollActivator : MonoBehaviour
     [SerializeField] private ThirdPersonController thirdPersonController;
 
     [Header("Rigidbody")]
-    [SerializeField] private new Rigidbody rigidbodyToPush;
-    [SerializeField] private Vector3 pushDirection;
+    [SerializeField] private Rigidbody rigidbodyToPush;
 
     [Header("Colliders")]
     [SerializeField] private RadgollComponent[] ragdollComponents;
@@ -39,13 +38,7 @@ public class RagdollActivator : MonoBehaviour
         ragdollComponents = ragdols.ToArray();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.E))
-            ActivateRagdoll();
-    }
-
-    private void ActivateRagdoll()
+    public void ActivateRagdoll(Vector3 pushDirection)
     {
         animator.enabled = false;
         characterController.enabled = false;
@@ -57,31 +50,5 @@ public class RagdollActivator : MonoBehaviour
         }
 
         rigidbodyToPush.AddForce(pushDirection, ForceMode.Impulse);
-    }
-}
-
-[System.Serializable]
-public class RadgollComponent
-{
-    public Collider collider;
-    public Rigidbody rigidbody;
-
-    public RadgollComponent(Collider collider, Rigidbody rigidbody)
-    {
-        this.rigidbody = rigidbody;
-        this.collider = collider;
-    }
-
-    public void Deactivate()
-    {
-        collider.enabled = false;
-        rigidbody.isKinematic = true;
-    }
-
-    public void Activate()
-    {
-        collider.enabled = true;
-        rigidbody.isKinematic = false;
-        rigidbody.velocity = Vector3.zero;
     }
 }
