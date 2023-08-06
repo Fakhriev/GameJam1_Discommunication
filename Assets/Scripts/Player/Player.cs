@@ -8,6 +8,7 @@ public class Player : MonoBehaviour, IService
     [SerializeField] private ThirdPersonController thirdPersonController;
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Rigidbody pushRb;
+    [SerializeField] private GameObject copOnHead;
 
     public void Die(Vector3 pushDirection)
     {
@@ -32,5 +33,10 @@ public class Player : MonoBehaviour, IService
         characterController.enabled = false;
         transform.position = position;
         characterController.enabled = true;
+    }
+
+    public void SetCopOnHeadActiveState(bool value)
+    {
+        copOnHead.SetActive(value);
     }
 }
