@@ -14,6 +14,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private Transform maximalZTransform;
 
     [Header("Spawn Parametres")]
+    [SerializeField] private Transform spawnParent;
     [SerializeField] private float _spawnPosY = 10;
     [SerializeField] private float _startDelay = 1;
     [SerializeField] private float _spawnInterval = 1;
@@ -30,6 +31,6 @@ public class SpawnManager : MonoBehaviour
         float zPosition = Random.Range(minimalZTransform.position.z, maximalZTransform.position.z);
 
         Vector3 spawnPos = new Vector3(xPosition, _spawnPosY, zPosition);
-        Instantiate(_foodPrefabs[foodIndex], spawnPos, _foodPrefabs[foodIndex].transform.rotation);
+        Instantiate(_foodPrefabs[foodIndex], spawnPos, _foodPrefabs[foodIndex].transform.rotation, spawnParent);
     }
 }
