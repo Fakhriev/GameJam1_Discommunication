@@ -11,6 +11,7 @@ public class Player : MonoBehaviour, IService
     [SerializeField] private GameObject copOnHead;
 
     [SerializeField] private GameObject[] boxes;
+    [SerializeField] private GameObject[] stones;
 
     private float _defaultMoveSpeed;
     private float _defaultSprintSpeed;
@@ -71,6 +72,14 @@ public class Player : MonoBehaviour, IService
         foreach (var box in boxes)
         {
             box.gameObject.SetActive(false);
+        }
+    }
+
+    public void ActivateStones()
+    {
+        foreach (var stone in stones)
+        {
+            stone.gameObject.SetActive(stone);
         }
     }
 }

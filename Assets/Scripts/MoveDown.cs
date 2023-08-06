@@ -10,6 +10,7 @@ public class MoveDown : CollisionTrigger
     protected override void OnPlayerCollided(PlayerHibox playerHibox)
     {
         playerHibox.Player.Die(Vector3.zero);
+        playerHibox.Player.ActivateStones();
     }
 
     private void Update()
