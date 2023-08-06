@@ -13,6 +13,8 @@ public class Player : MonoBehaviour, IService
     [SerializeField] private GameObject[] boxes;
     [SerializeField] private GameObject[] stones;
 
+    [SerializeField] private Transform equipBone;
+
     private float _defaultMoveSpeed;
     private float _defaultSprintSpeed;
     private float _defaultJumpHieght;
@@ -88,5 +90,12 @@ public class Player : MonoBehaviour, IService
         {
             stone.gameObject.SetActive(stone);
         }
+    }
+
+    public void DeactivateControllers()
+    {
+        characterController.enabled = false;
+        thirdPersonController.enabled = false;
+        equipBone.gameObject.SetActive(false);
     }
 }

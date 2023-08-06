@@ -11,6 +11,7 @@ namespace Source.Finish
         {
             FinishTrigger.LevelFinished += OnLevelFinished;
         }
+
         private void OnDisable()
         {
             FinishTrigger.LevelFinished -= OnLevelFinished;
@@ -18,7 +19,8 @@ namespace Source.Finish
 
         private void OnLevelFinished(PlayerHibox playerHibox)
         {
-            playerHibox.Player.SetPosition(_player.transform.position, Quaternion.Euler(0,90,0));
+            playerHibox.Player.DeactivateControllers();
+            playerHibox.Player.SetPosition(_player.transform.position, Quaternion.Euler(0, 170f, 0));
             _player.GetComponent<Animator>().SetTrigger("FinishTrigger");
         }
 
