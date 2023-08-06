@@ -10,6 +10,10 @@ public class Player : MonoBehaviour, IService
     [SerializeField] private Rigidbody pushRb;
     [SerializeField] private GameObject copOnHead;
 
+    private float _defaultMoveSpeed;
+    private float _defaultSprintSpeed;
+    private float _defaultJumpHieght;
+
     public void Die(Vector3 pushDirection)
     {
         playerHibox.Deactivate();
@@ -38,5 +42,23 @@ public class Player : MonoBehaviour, IService
     public void SetCopOnHeadActiveState(bool value)
     {
         copOnHead.SetActive(value);
+    }
+
+    public void Slow(float slowMultiplyier)
+    {
+        _defaultMoveSpeed = thirdPersonController.MoveSpeed;
+        _defaultSprintSpeed = thirdPersonController.SprintSpeed;
+        _defaultJumpHieght = thirdPersonController.JumpHeight;
+
+        thirdPersonController.MoveSpeed *= slowMultiplyier;
+        thirdPersonController.SprintSpeed *= slowMultiplyier;
+        thirdPersonController.JumpHeight *= slowMultiplyier;
+    }
+
+    public void NormalizeSpeed()
+    {
+        thirdPersonController.MoveSpeed = _defaultMoveSpeed;
+        thirdPersonController.SprintSpeed = _defaultSprintSpeed;
+        thirdPersonController.JumpHeight = _defaultJumpHieght;
     }
 }
