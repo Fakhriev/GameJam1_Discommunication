@@ -22,6 +22,7 @@ public class SpawnManager : MonoBehaviour
     {
         int foodIndex = Random.Range(0, _foodPrefabs.Length);
         float xPosition = Random.Range(minimalXTransform.position.x, maximalXTransform.position.x);
+
         Vector3 spawnPos = new Vector3(xPosition, _spawnPosY, 0);
         Instantiate(_foodPrefabs[foodIndex], spawnPos, _foodPrefabs[foodIndex].transform.rotation);
     }

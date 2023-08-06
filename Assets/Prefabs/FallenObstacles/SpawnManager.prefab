@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: MaximalX
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -43,7 +43,7 @@ GameObject:
   m_Layer: 0
   m_Name: MinimalX
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -116,6 +116,7 @@ MonoBehaviour:
   - {fileID: 1265020226271220719, guid: 8da34ab6bc5ca45408f0cc5b2e9b476f, type: 3}
   - {fileID: 1559213921756004038, guid: 5b7c34cbd60df2c498605c145c052a2d, type: 3}
   - {fileID: 7694502643681502691, guid: 010a72c5bb0cb5e4abdc060dede6f13c, type: 3}
+  - {fileID: 3611583330746324812, guid: ad46eda1b47545341b4f090628feb36d, type: 3}
   - {fileID: 3611583330746324812, guid: ad46eda1b47545341b4f090628feb36d, type: 3}
   - {fileID: 3611583330746324812, guid: ad46eda1b47545341b4f090628feb36d, type: 3}
   minimalXTransform: {fileID: 7276107895127248114}
