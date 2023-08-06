@@ -122,5 +122,5 @@ MonoBehaviour:
   minimalXTransform: {fileID: 7276107895127248114}
   maximalXTransform: {fileID: 878901187841013549}
   _spawnPosY: 10
-  _startDelay: 1
-  _spawnInterval: 1
+  _startDelay: 10
+  _spawnInterval: 0.75
