@@ -6,8 +6,10 @@ public class SpawnManager : MonoBehaviour
 {
     [SerializeField] GameObject[] _foodPrefabs;
 
+    [SerializeField] private Transform minimalXTransform;
+    [SerializeField] private Transform maximalXTransform;
+
     [SerializeField] private float _spawnPosY = 10;
-    [SerializeField] private float _spawnPosX = 50;
     [SerializeField] private float _startDelay = 1;
     [SerializeField] private float _spawnInterval = 1;
 
@@ -16,15 +18,11 @@ public class SpawnManager : MonoBehaviour
         InvokeRepeating("SpawnFood",_startDelay,_spawnInterval);
     }
 
-    void Update()
-    {
-       
-    }
-
     public void SpawnFood()
     {
         int foodIndex = Random.Range(0, _foodPrefabs.Length);
-        Vector3 spawnPos = new Vector3(Random.Range(0, _spawnPosX), _spawnPosY, 0);
+        float xPosition = Random.Range(minimalXTransform.position.x, maximalXTransform.position.x);
+        Vector3 spawnPos = new Vector3(xPosition, _spawnPosY, 0);
         Instantiate(_foodPrefabs[foodIndex], spawnPos, _foodPrefabs[foodIndex].transform.rotation);
     }
 }
