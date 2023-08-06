@@ -11,4 +11,10 @@ public class TargetSceneLoad : MonoBehaviour
     {
         SceneManager.LoadScene(index);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("ÈÃĞÀ OÊÎÍ×ÅÍÀ");
+    }
 }
