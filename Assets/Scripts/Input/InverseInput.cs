@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class InverseInput : MonoBehaviour
 {
-
+    [SerializeField] private Player _player;
     [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private InverseInputTrigger _trigger;
+
     private Dictionary<InputMapState, string> _nameByStates = new Dictionary<InputMapState, string>
     {
         {InputMapState.Normal , "Player" },
@@ -17,6 +18,7 @@ public class InverseInput : MonoBehaviour
     private void OnInputChanged(InputMapState newState)
     {
         _playerInput.SwitchCurrentActionMap(_nameByStates[newState]);
+        _player.SetCopOnHeadActiveState(newState == InputMapState.Inverse);
     }
 
     private void OnEnable()
