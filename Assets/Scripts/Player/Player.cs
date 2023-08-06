@@ -10,6 +10,8 @@ public class Player : MonoBehaviour, IService
     [SerializeField] private Rigidbody pushRb;
     [SerializeField] private GameObject copOnHead;
 
+    [SerializeField] private GameObject[] boxes;
+
     private float _defaultMoveSpeed;
     private float _defaultSprintSpeed;
     private float _defaultJumpHieght;
@@ -53,6 +55,11 @@ public class Player : MonoBehaviour, IService
         thirdPersonController.MoveSpeed *= slowMultiplyier;
         thirdPersonController.SprintSpeed *= slowMultiplyier;
         thirdPersonController.JumpHeight *= slowMultiplyier;
+
+        foreach(var box in boxes)
+        {
+            box.gameObject.SetActive(true);
+        }
     }
 
     public void NormalizeSpeed()
@@ -60,5 +67,10 @@ public class Player : MonoBehaviour, IService
         thirdPersonController.MoveSpeed = _defaultMoveSpeed;
         thirdPersonController.SprintSpeed = _defaultSprintSpeed;
         thirdPersonController.JumpHeight = _defaultJumpHieght;
+
+        foreach (var box in boxes)
+        {
+            box.gameObject.SetActive(false);
+        }
     }
 }

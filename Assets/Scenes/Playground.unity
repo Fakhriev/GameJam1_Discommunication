@@ -993,6 +993,9 @@ MonoBehaviour:
   characterController: {fileID: 127927431}
   pushRb: {fileID: 563577772}
   copOnHead: {fileID: 409605340}
+  boxes:
+  - {fileID: 2113382661}
+  - {fileID: 2116307179}
 --- !u!114 &127927435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,7 +1010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 127927434}
   _playerInput: {fileID: 127927427}
-  _trigger: {fileID: 3052735359426574132}
+  _trigger: {fileID: 0}
 --- !u!114 &127927436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9971,17 +9974,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b335cb6e5961d24ea1bdcc853a203f8, type: 3}
---- !u!114 &3052735359426574132 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7745924112726451621, guid: 8b335cb6e5961d24ea1bdcc853a203f8, type: 3}
-  m_PrefabInstance: {fileID: 3052735359426574131}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 369d2289a9cf3f4429bf1bac8c5d69eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &3064786268436135799
 Transform:
   m_ObjectHideFlags: 0
