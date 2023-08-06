@@ -43,18 +43,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 4815716901286192839}
     m_Modifications:
     - target: {fileID: 1008440261044106408, guid: e5e7ea363146ee34e85799712e8d4586, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1008440261044106408, guid: e5e7ea363146ee34e85799712e8d4586, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1008440261044106408, guid: e5e7ea363146ee34e85799712e8d4586, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1008440261044106408, guid: e5e7ea363146ee34e85799712e8d4586, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.64
       objectReference: {fileID: 0}
@@ -96,7 +84,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5319675786135273623, guid: e5e7ea363146ee34e85799712e8d4586, type: 3}
       propertyPath: m_Name
-      value: PushBack_Heart
+      value: Teleport_Heart
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

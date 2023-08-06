@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class GameobjectDeactivator : TriggerObserver
 {
-    [SerializeField] private GameObject activateObject;
+    [SerializeField] private GameObject deactivateObject;
 
     protected override void OnTriggerActivated()
     {
-        activateObject.SetActive(false);
+        deactivateObject.SetActive(false);
     }
 }

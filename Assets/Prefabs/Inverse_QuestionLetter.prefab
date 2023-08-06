@@ -117,7 +117,6 @@ GameObject:
   - component: {fileID: 7693382627573901234}
   - component: {fileID: 3565856307788544640}
   - component: {fileID: 1418467396573768786}
-  - component: {fileID: 7384469937726593149}
   - component: {fileID: 7917707631609119111}
   m_Layer: 0
   m_Name: Inverse_QuestionLetter
@@ -176,22 +175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inverseInputEffectTimeInSec: 7.5
-  _destoyAfterCollided: 0
+  _destoyAfterCollided: 1
   _model: {fileID: 1224861767668238939}
---- !u!114 &7384469937726593149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5755166338651970961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11eed9088460b6346a8fa850712caa1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerInput: {fileID: 0}
-  _trigger: {fileID: 1418467396573768786}
 --- !u!114 &7917707631609119111
 MonoBehaviour:
   m_ObjectHideFlags: 0

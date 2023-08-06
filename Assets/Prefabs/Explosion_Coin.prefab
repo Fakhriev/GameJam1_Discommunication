@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8101488787628131518}
   - component: {fileID: 2836906980718587462}
   - component: {fileID: 5533699028679827361}
-  - component: {fileID: 8093017408380813478}
   - component: {fileID: 1000111127630242948}
   m_Layer: 0
   m_Name: Explosion_Coin
@@ -71,19 +70,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.75, y: 0.75, z: 0.75}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8093017408380813478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3156677961430539479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d76dffd9ebeb13e42b8511662c358e0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 180
 --- !u!114 &1000111127630242948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 2836906980718587462}
-  activateObject: {fileID: 6512935222467337065}
+  deactivateObject: {fileID: 6512935222467337065}
 --- !u!1 &6512935222467337065
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2128295078126082175}
+  - component: {fileID: 5401735003039728323}
   - component: {fileID: 2451761332239085579}
   - component: {fileID: 5058539290634521399}
   m_Layer: 0
@@ -131,6 +118,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8101488787628131518}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5401735003039728323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6512935222467337065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76dffd9ebeb13e42b8511662c358e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 180
 --- !u!33 &2451761332239085579
 MeshFilter:
   m_ObjectHideFlags: 0
