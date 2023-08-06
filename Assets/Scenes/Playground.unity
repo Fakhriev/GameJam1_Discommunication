@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 127927434}
   _playerInput: {fileID: 127927427}
-  _trigger: {fileID: 0}
+  _trigger: {fileID: 1087000912}
 --- !u!114 &127927436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4990,6 +4990,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1531003632}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1087000912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6418145646119229732, guid: 949ba55d3355fe54885803842e383550, type: 3}
+  m_PrefabInstance: {fileID: 1075352016085489930}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 369d2289a9cf3f4429bf1bac8c5d69eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1088843554
 GameObject:
   m_ObjectHideFlags: 0
