@@ -7,12 +7,13 @@ public class InverseInput : MonoBehaviour
 {
     [SerializeField] private Player _player;
     [SerializeField] private PlayerInput _playerInput;
-    [SerializeField] private InverseInputTrigger _trigger;
 
     private Dictionary<InputMapState, string> _nameByStates = new Dictionary<InputMapState, string>
     {
         {InputMapState.Normal , "Player" },
         {InputMapState.Inverse , "InversePlayer" },
+        {InputMapState.NoInput , "NoInput" },
+
     };
 
     private void OnInputChanged(InputMapState newState)
@@ -23,17 +24,20 @@ public class InverseInput : MonoBehaviour
 
     private void OnEnable()
     {
-        _trigger.InputMapChanged += OnInputChanged;
+        InverseInputTrigger.InputMapChanged += OnInputChanged;
+        FinishTrigger.InputMapChanged += OnInputChanged;
     }
 
     private void OnDisable()
     {
-        _trigger.InputMapChanged -= OnInputChanged;
+        InverseInputTrigger.InputMapChanged -= OnInputChanged;
+        FinishTrigger.InputMapChanged -= OnInputChanged;
     }
 }
 
 public enum InputMapState
 {
     Normal,
-    Inverse
+    Inverse, 
+    NoInput
 }

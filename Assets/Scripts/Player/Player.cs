@@ -40,6 +40,13 @@ public class Player : MonoBehaviour, IService
         transform.position = position;
         characterController.enabled = true;
     }
+    public void SetPosition(Vector3 position, Quaternion rotation)
+    {
+        characterController.enabled = false;
+        transform.position = position;
+        transform.rotation = rotation;
+        characterController.enabled = true;
+    }
 
     public void SetCopOnHeadActiveState(bool value)
     {

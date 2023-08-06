@@ -8,7 +8,7 @@ public class InverseInputTrigger : CollisionTrigger
     [SerializeField] private bool _destoyAfterCollided = false;
     [SerializeField] private GameObject _model;
     private Collider _collider;
-    public event Action<InputMapState> InputMapChanged;
+    public static event Action<InputMapState> InputMapChanged;
 
     private void Awake()
     {
