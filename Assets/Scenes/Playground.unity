@@ -923,6 +923,7 @@ MonoBehaviour:
   ragdollActivator: {fileID: 985182076}
   playerHibox: {fileID: 1256189599}
   thirdPersonController: {fileID: 127927430}
+  characterController: {fileID: 127927431}
 --- !u!114 &127927435
 MonoBehaviour:
   m_ObjectHideFlags: 0
